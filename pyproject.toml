@@ -1,11 +1,11 @@
 [build-system]
-requires = ["setuptools>=61.0", "setuptools-git-versioning<2", "libclang==11.0.1"]
+requires = ["setuptools>=61.0", "setuptools-git-versioning<2", "libclang>=11.0.1,<16"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "mplib"
 dynamic = ["version"]
-dependencies = ["numpy<2.0", "toppra >= 0.4.0", "transforms3d >= 0.3.1"]
+dependencies = ["numpy<2.0", "toppra == 0.6.3", "transforms3d >= 0.3.1"]
 requires-python = ">=3.8"
 authors = [
   {name="Minghua Liu", email = "minghua@ucsd.edu"},
@@ -145,4 +145,4 @@ test-command = "python3.10 -m pip install sapien==3.0.0.dev2 && python3.10 -m un
 test-skip = ["cp37-*", "cp38-*", "cp39-*", "cp311-*", "cp312-*"]
 
 [tool.cibuildwheel.linux]
-archs = ["x86_64"]
+archs = ["x86_64", "aarch64"]
