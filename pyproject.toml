@@ -1,11 +1,11 @@
 [build-system]
-requires = ["setuptools>=61.0", "setuptools-git-versioning<2", "libclang>=11.0.1,<16"]
+requires = ["setuptools>=61.0", "setuptools-git-versioning<2", "libclang>=11.0.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "mplib"
 dynamic = ["version"]
-dependencies = ["numpy<2.0", "toppra == 0.6.3", "transforms3d >= 0.3.1"]
+dependencies = ["numpy", "toppra >= 0.6.3", "transforms3d >= 0.3.1"]
 requires-python = ">=3.8"
 authors = [
   {name="Minghua Liu", email = "minghua@ucsd.edu"},
